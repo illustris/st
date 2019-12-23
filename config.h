@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "DroidSansMono Nerd Font:size=8:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -63,7 +63,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
@@ -83,32 +83,32 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
+/* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+  /* 8 normal colors */
+  [0] = "#000000", /* black   */
+  [1] = "#a80000", /* red     */
+  [2] = "#00a800", /* green   */
+  [3] = "#a85400", /* yellow  */
+  [4] = "#0000a8", /* blue    */
+  [5] = "#a800a8", /* magenta */
+  [6] = "#00a8a8", /* cyan    */
+  [7] = "#a8a8a8", /* white   */
 
-	[255] = 0,
+  /* 8 bright colors */
+  [8]  = "#545054", /* black   */
+  [9]  = "#f85450", /* red     */
+  [10] = "#50fc50", /* green   */
+  [11] = "#f8fc50", /* yellow  */
+  [12] = "#5054f8", /* blue    */
+  [13] = "#f854f8", /* magenta */
+  [14] = "#50fcf8", /* cyan    */
+  [15] = "#f8fcf8", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+  /* special colors */
+  [256] = "#000000", /* background */
+  [257] = "#a8a8a8", /* foreground */
 };
 
 
@@ -116,9 +116,9 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
 
 /*
