@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "DroidSansMono Nerd Font:size=8:antialias=true:autohint=true";
+static char *font = "DroidSansMNerdFontMono:size=8:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
